@@ -1,0 +1,5 @@
+pytest-benchmark
+line_profiler
+scalene
+snakeviz
+numpy
