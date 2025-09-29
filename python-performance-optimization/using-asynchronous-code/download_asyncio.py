@@ -18,7 +18,6 @@ async def asynchronous():
         coroutines = [async_download(session, 'http://google.com') for _ in range(5)]
         await asyncio.gather(*coroutines)
 
-
 @profile
 def main():
     synchronous()
