@@ -3,3 +3,4 @@ line_profiler
 scalene
 snakeviz
 numpy
+aiohttp

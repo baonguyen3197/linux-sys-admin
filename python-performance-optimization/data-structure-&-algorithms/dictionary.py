@@ -31,3 +31,32 @@ def main():
     search_dictionary(big_dictionary, orders_to_search)
 
 main()
+
+# To run the profiler, use the command:
+# kernprof -lv dictionary.py
+
+# To view the results, use the command:
+# python -m line_profiler dictionary.py.lprof
+
+# cmd
+# python -m timeit "{'order_id':1}"
+
+# python -m timeit -s "from collections import namedtuple; Order=namedtuple('Order','order_id')" "Order(1)"
+
+# python -m timeit -s """
+# >> from dataclasses import dataclass
+# >> @dataclass  
+# >> class Order:     
+# >>     order_id: int
+# >> """ "Order(1)"
+
+# python -m timeit -s "order={'order_id':1}" "order['order_id']"
+
+# python -m timeit -s "from collections import namedtuple; Order=namedtuple('Order','order_id'); order=Order(1)" "order.order_id"
+
+# python -m timeit -s """                                                                                                 
+# >> from dataclasses import dataclass    
+# >> @dataclass                     
+# >> class Order:
+# >>     order_id: int
+# >> order=Order(1)""" "order.order_id"
